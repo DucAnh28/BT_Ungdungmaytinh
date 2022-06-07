@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính</title>
+</head>
+<body>
+<table>
+    <tr><th colspan="2">Calculator</th></tr>
+    <tr> <td>Số 1</td>
+            <td>Số 2</td>
+    </tr>
+    <tr>
+        <td><label><input type="number" id="so1"></label></td>
+        <td><label><input type="number" id="so2"></label></td>
+    </tr>
+</table>
+<button type="submit" id="cong" onclick="cong()">Cộng</button>
+<button type="submit" id="tru" onclick="tru()">Trừ</button>
+<button type="submit" id="nhan" onclick="nhan()">Nhân</button>
+<button type="submit" id="chia" onclick="chia()">Chia</button>
+<p id="ketqua"></p>
+</body>
+<script>
+    function cong(){
+    let Sothu1=document.getElementById("so1").value;
+        let Sothu2=document.getElementById("so2").value;
+    let ketqua = Number(Sothu1) + Number(Sothu2);
+    document.getElementById("ketqua").innerHTML = "Kết quả là " + ketqua;
+    }
+    function tru(){
+        let Sothu1=document.getElementById("so1").value;
+        let Sothu2=document.getElementById("so2").value;
+        let ketqua = Number(Sothu1) - Number(Sothu2);
+        document.getElementById("ketqua").innerHTML = "Kết quả là " + ketqua;
+    }
+    function nhan(){
+        let Sothu1=document.getElementById("so1").value;
+        let Sothu2=document.getElementById("so2").value;
+        let ketqua = Number(Sothu1) * Number(Sothu2);
+        document.getElementById("ketqua").innerHTML = "Kết quả là " + ketqua;
+    }
+    function chia(){
+        let Sothu1=document.getElementById("so1").value;
+        let Sothu2=document.getElementById("so2").value;
+        let ketqua = Number(Sothu1) / Number(Sothu2);
+        document.getElementById("ketqua").innerHTML = "Kết quả là " + ketqua;
+    }
+
+</script>
+</html>
